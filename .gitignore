@@ -58,7 +58,8 @@ captures/
 .DS_Store
 Thumbs.db
 
-# Python cache
+# Python scripts & cache (local only, avoid display on GitHub)
+*.py
 __pycache__/
 *.pyc
 
