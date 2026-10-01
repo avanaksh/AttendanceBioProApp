@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Fire%20OS-brightgreen.svg)](https://developer.android.com)
 [![RevenueCat](https://img.shields.io/badge/Monetization-RevenueCat%20SDK-orange.svg)](https://www.revenuecat.com)
-[![Event](https://img.shields.io/badge/RevenueCat-Shipaton%202026-purple.svg)](https://www.shipaton.com)
+[![Status](https://img.shields.io/badge/Release-v1.0%20Production-success.svg)](https://github.com/avanaksh/AttendanceBioProApp)
 
-**BioCheck Pro** is an enterprise-grade biometric workforce attendance and geofencing verification application built for Android and Amazon Fire OS devices. Designed for the **RevenueCat Shipaton 2026**, BioCheck Pro turns any standard Android device into a high-security attendance kiosk, eliminating buddy-punching and time theft with 100% on-device edge AI.
+**BioCheck Pro** is an enterprise-grade biometric workforce attendance and geofencing verification application built for Android and Amazon Fire OS devices. BioCheck Pro turns any standard Android device into a high-security attendance kiosk, eliminating buddy-punching and time theft with 100% on-device edge AI.
 
 ---
 
@@ -16,7 +16,7 @@
 * 💳 **RevenueCat Tiered In-App Subscriptions:** Powered natively by the RevenueCat SDK with the `pro_access` entitlement, offering monthly and annual subscriptions with automatic localized currency display and 7-day free trials.
 * 🏢 **Multi-Flavor Build Architecture:** Clean Gradle product flavors supporting **Google Play Store** (`standardAndroid`) and **Amazon Appstore** (`amazon`), each utilizing isolated store-specific RevenueCat API keys and billing clients.
 * 📊 **Automated Payroll Reporting:** One-tap export of verified check-in timestamps, GPS coordinates, and face-match scores into CSV and PDF reports.
-* 🛡️ **Judge & Evaluator Ready:** Built-in evaluation mechanisms including one-tap trial simulation and promo code redemption (`JUDGE2026` or `REVENUECAT`) to test all premium features without payment.
+* 🛡️ **Evaluator Ready:** Built-in evaluation mechanisms including one-tap trial simulation and promo code redemption (`JUDGE2026` or `REVENUECAT`) to test all premium features without payment.
 
 ---
 
@@ -33,7 +33,7 @@
 
 ---
 
-## 💰 Monetization Strategy (HAMM Award)
+## 💰 Monetization Strategy
 
 BioCheck Pro employs a high-converting **B2B SaaS tiered model** addressing the daily operational needs of small-to-medium businesses:
 
@@ -46,9 +46,9 @@ Traditional biometric punch clocks cost **$300–$800 upfront** plus maintenance
 
 ---
 
-## 🧪 Testing Instructions for Judges
+## 🧪 Evaluation & Testing Instructions
 
-To test all premium features without being charged:
+To test all premium features without payment:
 1. Open the app and navigate to **Upgrade to Pro** (or attempt to export a payroll CSV/PDF report).
 2. Tap **"Redeem Promo Code"** and enter:
    ```text
