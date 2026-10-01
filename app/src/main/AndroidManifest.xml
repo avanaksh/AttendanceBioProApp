@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <!-- Explicitly declare support for all Fire Tablet screen sizes (7", 8", 10", 11") -->
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+
+    <application
+        android:name=".AttendanceApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher"
+        android:label="BioCheck Pro"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AttendanceApp"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="35">
+        
+        <activity
+            android:name=".iap.PaywallActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AttendanceApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.OrganizationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AttendanceApp" />
+
+        <activity
+            android:name=".ui.OrganizationDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AttendanceApp" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AttendanceApp" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.VotingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.AdminPortalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AttendanceApp" />
+
+    </application>
+
+</manifest>

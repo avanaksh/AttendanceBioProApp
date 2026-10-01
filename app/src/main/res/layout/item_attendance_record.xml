@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_slate_card"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- Top Row: Name, User ID & Attendance Type Badge -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/tv_record_type_badge"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/tv_record_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alex Rivera"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_record_userid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID: EMP-9021 | ICAR-CIFE Mumbai"
+                android:textColor="@color/indigo_500"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_record_occasion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Occasion: Office Hours Attendance"
+                android:textColor="@color/amber_500"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_record_type_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_btn_indigo"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="Morning Shift"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Aadhaar Number Highlight Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0F172A"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🆔 Aadhaar:"
+            android:textColor="@color/slate_400"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/tv_record_aadhaar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234-5678-9021"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Device Record Status -->
+        <TextView
+            android:id="@+id/tv_record_sync_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Record"
+            android:textColor="@color/emerald_500"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Details Grid: Date & Time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 Date/Time: "
+            android:textColor="@color/slate_400"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_record_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/09/2026, 09:30:15 AM"
+            android:textColor="@color/slate_100"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Verification Mode & Confidence -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👁️ Verification: "
+            android:textColor="@color/slate_400"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_record_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Face + Eye Blink (Confidence: 98%)"
+            android:textColor="@color/slate_100"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- GPS Location Address -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 Location: "
+            android:textColor="@color/slate_400"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_record_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Versova, Andheri West, Mumbai (19.0760 N, 72.8777 E)"
+            android:textColor="@color/slate_100"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/slate_900">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="➕ Add Organization Member"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/et_member_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Full Name (e.g. Adv. R. K. Varma)"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/et_member_work"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Nature of Work / Role (e.g. Judicial Clerk / Ward Officer)"
+        android:inputType="textCapWords"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/et_member_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Mobile / Contact No. (e.g. 9820011234)"
+        android:inputType="phone"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Role: Member (Administrator is already added by default)"
+        android:textColor="@color/slate_400"
+        android:textSize="12sp"
+        android:layout_marginBottom="6dp" />
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/slate_900">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📢 Add Voting Topic / Problem / Announcement"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin can post topics, problems, issues, or caste your vote announcements for which members will cast votes."
+        android:textColor="@color/slate_400"
+        android:textSize="12sp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/et_topic_category"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Category (e.g. Election Notification / Civic Issue)"
+        android:inputType="textCapWords"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/et_topic_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Topic / Issue Title (e.g. Selection of Judges / CJM)"
+        android:inputType="textCapSentences"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/et_topic_description"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_edit_text"
+        android:gravity="top|start"
+        android:hint="Detailed description or problem context..."
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <EditText
+        android:id="@+id/et_topic_options"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_edit_text"
+        android:hint="Voting Options (Comma separated, e.g. Candidate A, Candidate B)"
+        android:inputType="text"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/slate_400"
+        android:textSize="13sp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⏰ Authorized Voting Period (HH:mm 24-hr)"
+        android:textColor="@color/amber_500"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_voting_start_time"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Start (e.g. 10:00)"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/slate_400"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp" />
+
+        <EditText
+            android:id="@+id/et_voting_end_time"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text"
+            android:hint="End (e.g. 16:00)"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/slate_400"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+</LinearLayout>

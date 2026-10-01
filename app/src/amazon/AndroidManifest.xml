@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Amazon Appstore & Fire OS Optimization:
+         Camera and touchscreen hardware are strictly optional so Amazon Appstore
+         identifies 100% of Fire Tablets (Fire 7, Fire HD 8, Fire 10, Fire 11, Fire TV) as Supported Devices! -->
+    <uses-permission android:name="com.android.vending.BILLING" tools:node="remove" />
+
+    <!-- Camera is strictly optional for Fire Tablets -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" tools:replace="android:required" />
+
+
+    <!-- Remove Google Play Billing and Google Play Services artifacts from Amazon build -->
+    <queries>
+        <intent tools:node="remove">
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+        </intent>
+        <intent tools:node="remove">
+            <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND" />
+        </intent>
+    </queries>
+
+    <application>
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            tools:node="remove" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            tools:node="remove" />
+
+        <activity
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            tools:node="remove" />
+
+        <activity
+            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+            tools:node="remove" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            tools:node="remove" />
+
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            tools:node="remove" />
+
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            tools:node="remove" />
+
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            tools:node="remove" />
+    </application>
+
+</manifest>

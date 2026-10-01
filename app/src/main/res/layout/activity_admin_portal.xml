@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slate_950"
+    android:orientation="vertical">
+
+    <!-- Top Action Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/slate_900"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛡️ Admin Records Portal"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Real-Time Device Audit Records"
+                android:textColor="@color/slate_400"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_admin_export"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_btn_indigo"
+            android:text="CSV"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:paddingHorizontal="10dp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_admin_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_slate_card"
+            android:text="Logout"
+            android:textColor="@color/slate_100"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:paddingHorizontal="10dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Summary Metric Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Total Logs -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_slate_card"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_stat_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Logs"
+                        android:textColor="@color/slate_400"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Morning -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_slate_card"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_stat_morning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/indigo_500"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Morning Shift"
+                        android:textColor="@color/slate_400"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Evening -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_slate_card"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_stat_evening"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/amber_500"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Evening Shift"
+                        android:textColor="@color/slate_400"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Verified -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_slate_card"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_stat_synced"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/emerald_500"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verified"
+                        android:textColor="@color/slate_400"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Mark Record for Occasion Button (Requirement 18) -->
+            <Button
+                android:id="@+id/btn_admin_mark_occasion"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_badge_gold"
+                android:text="➕ Mark Record for User and Occasion"
+                android:textColor="@color/slate_950"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Advanced Filter Controls Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_slate_card"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔍 Filter and Search Records"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Aadhaar / Name / ID Search Bar -->
+                <EditText
+                    android:id="@+id/et_search_aadhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/slate_900"
+                    android:hint="Search Aadhaar No, Name, or User ID..."
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/slate_600"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="13sp"
+                    android:singleLine="true"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Date Filter Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btn_pick_date"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_weight="1"
+                        android:background="@color/slate_900"
+                        android:text="📅 Filter by Date: All Dates"
+                        android:textColor="@color/slate_100"
+                        android:textSize="12sp"
+                        android:textAllCaps="false"
+                        android:paddingHorizontal="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_clear_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:background="@android:color/transparent"
+                        android:text="Clear Date"
+                        android:textColor="@color/rose_500"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:visibility="gone"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <!-- Filter Chips Row: Occasion Filter (Requirement 18 & 20) -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Occasion Filter:"
+                    android:textColor="@color/slate_400"
+                    android:textSize="11sp"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btn_chip_occ_all"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_indigo"
+                        android:text="All Occasions"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_chip_occ_office"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.2"
+                        android:background="@color/slate_900"
+                        android:text="Office Hours"
+                        android:textColor="@color/slate_400"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_chip_occ_election"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.3"
+                        android:background="@color/slate_900"
+                        android:text="Committee Election"
+                        android:textColor="@color/slate_400"
+                        android:textSize="11sp"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+                <!-- Filter Chips Row: Attendance Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attendance Type:"
+                    android:textColor="@color/slate_400"
+                    android:textSize="11sp"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btn_chip_type_all"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_indigo"
+                        android:text="All"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_chip_type_morning"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.2"
+                        android:background="@color/slate_900"
+                        android:text="Morning Shift"
+                        android:textColor="@color/slate_400"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btn_chip_type_evening"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.2"
+                        android:background="@color/slate_900"
+                        android:text="Evening Shift"
+                        android:textColor="@color/slate_400"
+                        android:textSize="11sp"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!-- Results Count Bar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tv_results_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Showing 0 records"
+                    android:textColor="@color/indigo_500"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_reset_filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Reset All Filters"
+                    android:textColor="@color/slate_400"
+                    android:textSize="11sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </RelativeLayout>
+
+            <!-- Empty State View -->
+            <LinearLayout
+                android:id="@+id/layout_empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_slate_card"
+                android:padding="32dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔎"
+                    android:textSize="36sp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Attendance Records Found"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No logs match your Aadhaar, date, or status filter criteria."
+                    android:textColor="@color/slate_400"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- RecyclerView for Records -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_admin_records"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
