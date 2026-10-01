@@ -1,9 +1,9 @@
 # BioCheck Pro (AttendanceBioProApp) 📱✨
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Fire%20OS-brightgreen.svg)](https://developer.android.com)
 [![RevenueCat](https://img.shields.io/badge/Monetization-RevenueCat%20SDK-orange.svg)](https://www.revenuecat.com)
-[![Hackathon](https://img.shields.io/badge/RevenueCat-Shipaton%202026-purple.svg)](https://revenuecat-shipaton-2026.devpost.com)
+[![Event](https://img.shields.io/badge/RevenueCat-Shipaton%202026-purple.svg)](https://www.shipaton.com)
 
 **BioCheck Pro** is an enterprise-grade biometric workforce attendance and geofencing verification application built for Android and Amazon Fire OS devices. Designed for the **RevenueCat Shipaton 2026**, BioCheck Pro turns any standard Android device into a high-security attendance kiosk, eliminating buddy-punching and time theft with 100% on-device edge AI.
 
@@ -74,8 +74,7 @@ AttendanceBioProApp/
 │   │   ├── standardAndroid/      # Google Play flavor (Google Play Billing 8.3.0)
 │   │   └── amazon/               # Amazon Appstore flavor (purchases-store-amazon)
 │   └── build.gradle              # Multi-flavor dependencies & SDK configurations
-├── devpost_award_notes.md        # Devpost award submissions guide
-├── devpost_hamm_award.md         # HAMM Award submission writeup
+├── LICENSE                       # MIT Open Source License
 └── README.md
 ```
 
@@ -104,4 +103,10 @@ cd AttendanceBioProApp
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open source and available under the [MIT License](LICENSE).
+
+```text
+MIT License
+Copyright (c) 2026 Avanaksh Singh Sambyal
+```
+See the full text in the [LICENSE](LICENSE) file.

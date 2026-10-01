@@ -62,5 +62,26 @@ Thumbs.db
 __pycache__/
 *.pyc
 
-# Large demo video (available on YouTube)
+# Store asset folders (avoid display on GitHub)
+amazon_store_assets/
+google_play_assets/
+store_assets/
+
+# SVG files
+*.svg
+
+# Markdown documentation files (exclude all except README.md)
+*.md
+!README.md
+
+# Large media files
 attendance_app_2min_demo.mp4
+
+# Test and temporary assets
+test_*.png
+test_chk.png
+test_cap.png
+test_icons.png
+test_icon_*.png
+devpost_cover_image.png
+workflow_diagram.png
