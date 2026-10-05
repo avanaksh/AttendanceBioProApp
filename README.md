@@ -20,14 +20,14 @@
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## 🛠️ Architecture and Tech Stack
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
-| **Language** | Kotlin and Java | Modern Android development with Coroutines & ViewBinding |
+| **Language** | Kotlin and Java | Modern Android development with Coroutines and ViewBinding |
 | **Monetization** | RevenueCat SDK | Subscriptions, entitlements (`pro_access`), dynamic offerings, customer info cache |
 | **Biometrics / AI** | On-Device ML | Real-time face detection, alignment, and facial embedding comparison |
-| **Location Services** | Google Play Location / GPS | Dual-provider GPS geofencing with graceful fallbacks |
+| **Location Services** | Google Play Location / GPS | GPS provider geofencing with graceful fallbacks |
 | **Database** | SQLite / Room | Offline-first local persistence for employee records and duty logs |
 | **UI Design** | Material Design 3 | Dark-mode biometric scanner ring, radar view, and custom Paywall |
 
@@ -67,13 +67,13 @@ AttendanceBioProApp/
 │   ├── src/
 │   │   ├── main/                 # Core shared application logic, UI, and ML
 │   │   │   ├── java/com/lrms/attendanceapp/
-│   │   │   │   ├── iap/          # RevenueCat SubscriptionManager & PaywallActivity
+│   │   │   │   ├── iap/          # RevenueCat SubscriptionManager and PaywallActivity
 │   │   │   │   ├── ui/           # Activities, ViewHolders, Biometric Radar View
-│   │   │   │   └── util/         # Geofencing, DeviceEnvironment & SQLite helpers
+│   │   │   │   └── util/         # Geofencing, DeviceEnvironment and SQLite helpers
 │   │   │   └── res/              # Layouts, vector drawables, localized strings
 │   │   ├── standardAndroid/      # Google Play flavor (Google Play Billing 8.3.0)
 │   │   └── amazon/               # Amazon Appstore flavor (purchases-store-amazon)
-│   └── build.gradle              # Multi-flavor dependencies & SDK configurations
+│   └── build.gradle              # Multi-flavor dependencies and SDK configurations
 ├── LICENSE                       # MIT Open Source License
 └── README.md
 ```
