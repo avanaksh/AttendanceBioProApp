@@ -5,7 +5,7 @@
 [![RevenueCat](https://img.shields.io/badge/Monetization-RevenueCat%20SDK-orange.svg)](https://www.revenuecat.com)
 [![Status](https://img.shields.io/badge/Release-v1.0%20Production-success.svg)](https://github.com/avanaksh/AttendanceBioProApp)
 
-**BioCheck Pro** is an enterprise-grade biometric workforce attendance and geofencing verification application built for Android and Amazon Fire OS devices. BioCheck Pro turns any standard Android device into a high-security attendance kiosk, eliminating buddy-punching and time theft with 100% on-device edge AI.
+**BioCheck Pro** is an enterprise-grade biometric workforce attendance and geofencing verification application built for Android and Amazon Fire OS devices. This app turns any standard Android device into a high-security attendance kiosk, eliminating buddy-punching and time theft with 100% on-device edge AI.
 
 ---
 
@@ -16,7 +16,7 @@
 * 💳 **RevenueCat Tiered In-App Subscriptions:** Powered natively by the RevenueCat SDK with the `pro_access` entitlement, offering monthly and annual subscriptions with automatic localized currency display and 7-day free trials.
 * 🏢 **Multi-Flavor Build Architecture:** Clean Gradle product flavors supporting **Google Play Store** (`standardAndroid`) and **Amazon Appstore** (`amazon`), each utilizing isolated store-specific RevenueCat API keys and billing clients.
 * 📊 **Automated Payroll Reporting:** One-tap export of verified check-in timestamps, GPS coordinates, and face-match scores into CSV and PDF reports.
-* 🛡️ **Evaluator Ready:** Built-in evaluation mechanisms including one-tap trial simulation and promo code redemption (`JUDGE2026` or `REVENUECAT`) to test all premium features without payment.
+* 🛡️ **Evaluator Ready:** Built-in evaluation mechanisms including one-tap trial simulation and promo code redemption (`XXXXX2026` or `REVENUECAT`) to test all premium features without payment.
 
 ---
 
@@ -24,7 +24,7 @@
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
-| **Language** | Kotlin & Java | Modern Android development with Coroutines & ViewBinding |
+| **Language** | Kotlin and Java | Modern Android development with Coroutines & ViewBinding |
 | **Monetization** | RevenueCat SDK | Subscriptions, entitlements (`pro_access`), dynamic offerings, customer info cache |
 | **Biometrics / AI** | On-Device ML | Real-time face detection, alignment, and facial embedding comparison |
 | **Location Services** | Google Play Location / GPS | Dual-provider GPS geofencing with graceful fallbacks |
@@ -46,13 +46,13 @@ Traditional biometric punch clocks cost **$300–$800 upfront** plus maintenance
 
 ---
 
-## 🧪 Evaluation & Testing Instructions
+## 🧪 Evaluation and Testing Instructions
 
 To test all premium features without payment:
 1. Open the app and navigate to **Upgrade to Pro** (or attempt to export a payroll CSV/PDF report).
 2. Tap **"Redeem Promo Code"** and enter:
    ```text
-   JUDGE2026
+   XXXXX2026
    ```
    *(or `REVENUECAT` / `SHIPATON`)*. This will permanently activate `pro_access` for the device.
 3. Alternatively, tap **"Start 7-Day Free Trial"** to simulate an active trial subscription.
